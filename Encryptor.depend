@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1581930714 source:e:\importantsoftwares\codeblocks\workspace\encryptor\main.cpp
+	<iostream>
+	<cstdlib>
+	"Encrypt.h"
+	<fstream>
+
+1581930521 source:e:\importantsoftwares\codeblocks\workspace\encryptor\src\encrypt.cpp
+	"Encrypt.h"
+	<cstdlib>
+	<fstream>
+
+1580720064 e:\importantsoftwares\codeblocks\workspace\encryptor\include\encrypt.h
+	<iostream>
+

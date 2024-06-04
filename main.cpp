@@ -11,6 +11,7 @@ int main()
     std::string inp;
 
     while (inp != "x"){
+        system("clear");
         std::cout << "To see Cipher Table, press 's'\nTo see more options, press 'm'\nTo exit, press 'x': ";
         std::cin >> inp;
         std::cout << std::endl;

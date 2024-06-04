@@ -95,12 +95,15 @@ std::string Encrypt::decrpt(std::string& dpText, std::string& dkey)
 
 void Encrypt::printCipher()
 {
+    system("clear");
     for (int x=0; x<a; x++){
         for (int y=0; y<b; y++){
             std::cout << arry[x][y] << " ";
         }
         std::cout << std::endl;
     }
+    std::cout << "Press any key to continue...\n";
+    system("read dummy");
 }
 
 std::string Encrypt::setKey(std::string& pText, std::string& key)
@@ -179,27 +182,33 @@ void Encrypt::imp()
         std::cout << decrpt(line, mkeyi) << std::endl;
     }
     ifile.close();
+    std::cout << "Press any key to continue...\n";
+    system("read dummy");
 }
 
 void Encrypt::start()
 {
+    system("clear");
     std::string menuInput, input, input1, w, key;
-    std::cout << "To encrypt or decrypt, press 'd'\nTo feed data, press 'f': ";
+    std::cout << "To encrypt or decrypt, type 'd'\nTo feed data, type 'f': ";
     std::cin >> menuInput;
     std::cout << std::endl;
 
     if (menuInput == "d"){
-        std::cout << "To encrypt, press 'e'\nTo decrypt, press 'd': ";
+        system("clear");
+        std::cout << "To encrypt, type 'e'\nTo decrypt, type 'd': ";
         std::cin >> input;
         std::cout << std::endl;
 
         if (input == "e"){
+            system("clear");
             std::cout << "Enter a phrase to encrypt: ";
             std::cin.ignore();
             std::getline(std::cin, w);
             std::cout << std::endl;
         }
         else if (input == "d"){
+            system("clear");
             std::cout << "Enter a phrase to decrypt: ";
             std::cin.ignore();
             std::getline(std::cin, w);
@@ -207,7 +216,8 @@ void Encrypt::start()
         }
     }
     else if (menuInput == "f"){
-        std::cout << "To see saved data, press 'sd'\nTo add data, press 'ad': ";
+        system("clear");
+        std::cout << "To see saved data, type 'sd'\nTo add data, type 'ad': ";
         std::cin >> input1;
 
         if (input1 == "sd"){ /// Requires a key.
@@ -236,6 +246,8 @@ void Encrypt::start()
             std::cout << "Decrypted data: " << decrpt(w, mkey) << std::endl;
             std::cout << std::endl;
         }
+        std::cout << "Press any key to continue...\n";
+        system("read dummy");
     }
 
 }
